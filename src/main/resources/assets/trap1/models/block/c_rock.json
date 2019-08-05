@@ -1,0 +1,6 @@
+{
+   "parent": "block/cube_all",
+   "textures": {
+       "all": "trap1:blocks/c_rock"
+   }
+}
