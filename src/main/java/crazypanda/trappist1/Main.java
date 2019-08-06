@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import crazypanda.trappist1.proxy.CommonProxy;
 import crazypanda.trappist1.util.Reference;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION /*, dependencies = "required-after:GalacticraftCore;"*/)
 public class Main 
 {
 	@Instance

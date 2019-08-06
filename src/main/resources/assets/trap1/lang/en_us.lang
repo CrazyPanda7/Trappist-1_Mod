@@ -5,3 +5,7 @@ tile.b_rock.name=Trappist-1b Rock
 tile.c_surfacerock.name=Trappist-1c Surface Rock
 tile.c_subrock.name=Trappist-1c Sub-Surface Rock
 tile.c_rock.name=Trappist-1c Rock
+
+tile.d_surfacerock.name=Trappist-1d Surface Rock
+tile.d_subrock.name=Trappist-1d Sub-Surface Rock
+tile.d_rock.name=Trappist-1d Rock
