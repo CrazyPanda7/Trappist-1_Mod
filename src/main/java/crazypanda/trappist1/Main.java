@@ -11,6 +11,7 @@ import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import crazypanda.trappist1.planets.Trappist1_Planets;
 import crazypanda.trappist1.proxy.CommonProxy;
 import crazypanda.trappist1.util.Reference;
 
@@ -45,7 +46,7 @@ public class Main
 	
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event)
-    {
-        
+    {	
+		Trappist1_Planets.init();
     }
 }
