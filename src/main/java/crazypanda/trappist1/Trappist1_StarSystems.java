@@ -16,12 +16,11 @@ public class Trappist1_StarSystems
 		registerSolarSystems();
 	}
 	
-	@SuppressWarnings("deprecation")
 	private static void initializeSolarSystems() {
 		
 		trappist1 = new SolarSystem("trappist1", "milkyWay").setMapPosition(new Vector3(90.0F, 30.0F, 0));
 		Star starSol = (Star) new Star("trappist1").setParentSolarSystem(trappist1).setTierRequired(-1);
-		starSol.setBodyIcon(new ResourceLocation(GalacticraftCore.NAME, "textures/gui/celestialbodies/sun.png"));
+		starSol.setBodyIcon(new ResourceLocation(GalacticraftCore.NAME, "textures/celestialbodies/trappist1.png"));
 		trappist1.setMainStar(starSol);
 		
 	}
