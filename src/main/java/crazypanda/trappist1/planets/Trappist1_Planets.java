@@ -31,6 +31,7 @@ public class Trappist1_Planets {
 		
 		registryCelestial();
 		registryTeleport();
+		
 	}
 
 	private static void registryTeleport() 
