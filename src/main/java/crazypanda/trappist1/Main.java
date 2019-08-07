@@ -24,10 +24,10 @@ public class Main
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
-	/*private SolarSystem Trappist1System;
+	private SolarSystem Trappist1System;
 	
 	
-	@EventHandler
+	/*@EventHandler
 	public void load(FMLInitializationEvent event) {
 		
 		Trappist1System = new SolarSystem("Trappist1", "MilkyWay");
