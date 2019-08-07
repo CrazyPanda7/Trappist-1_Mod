@@ -1,7 +1,10 @@
 package crazypanda.trappist1.planets;
 
 import asmodeuscore.core.astronomy.BodiesHelper.Galaxies;
+import crazypanda.trappist1.planets.trappist1b.dimension.TeleportTypeTrappist1b;
+import crazypanda.trappist1.planets.trappist1b.dimension.WorldProviderTrappist1b;
 import crazypanda.trappist1.util.Reference;
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
@@ -55,7 +58,7 @@ public class Trappist1_Planets {
 
 	private static void registryTeleport() 
 	{
-		
+		GalacticraftRegistry.registerTeleportType(WorldProviderTrappist1b.class, new TeleportTypeTrappist1b());
 	}
 
 	private static void registryCelestial() 
@@ -64,5 +67,6 @@ public class Trappist1_Planets {
 		GalaxyRegistry.registerPlanet(Trappist1b);
 		GalaxyRegistry.registerPlanet(Trappist1c);
 		GalaxyRegistry.registerPlanet(Trappist1d);
+		
 	}
 }

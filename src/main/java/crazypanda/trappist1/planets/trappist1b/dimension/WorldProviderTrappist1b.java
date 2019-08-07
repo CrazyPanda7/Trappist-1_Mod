@@ -4,7 +4,9 @@ import java.util.List;
 
 import asmodeuscore.api.dimension.IProviderFreeze;
 import asmodeuscore.core.astronomy.dimension.world.gen.WorldProviderAdvancedSpace;
+import crazypanda.trappist1.planets.Trappist1_Planets;
 import crazypanda.trappist1.planets.trappist1b.world.gen.BiomeProviderTrappist1b;
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
@@ -13,6 +15,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DimensionType;
+import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.client.FMLClientHandler;
@@ -33,7 +36,7 @@ public class WorldProviderTrappist1b extends WorldProviderAdvancedSpace implemen
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return null;
+		return Trappist1_Planets.Trappist1b;
 	}
 
 	@Override

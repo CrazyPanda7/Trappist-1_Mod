@@ -26,24 +26,6 @@ public class Main
 	
 	private SolarSystem Trappist1System;
 	
-	
-	/*@EventHandler
-	public void load(FMLInitializationEvent event) {
-		
-		Trappist1System = new SolarSystem("Trappist1", "MilkyWay");
-		Vector3 pos = new Vector3();
-		pos.x = 0.7D;
-		pos.y = -0.5D;
-		Trappist1System.setMapPosition(pos);
-		
-		Star starTrappist1 = (Star) new Star("Trappist-1").setParentSolarSystem(Trappist1System).setTierRequired(-1);
-		starTrappist1.setBodyIcon(new ResourceLocation("trappist1", "textures/CelestialBodies/trappist1.png"));
-		starTrappist1.setRelativeSize(0.4F);
-		Trappist1System.setMainStar(starTrappist1);
-		
-		GalaxyRegistry.registerSolarSystem(Trappist1System);
-	}*/
-	
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event)
     {	
