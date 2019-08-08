@@ -99,7 +99,7 @@ public class WorldProviderTrappist1b extends WorldProviderAdvancedSpace implemen
 
 	@Override
 	public DimensionType getDimensionType() {
-		return null;
+		return Trappist1Dimensions.TRAPPIST1B;
 	}
 	
 	@Override
