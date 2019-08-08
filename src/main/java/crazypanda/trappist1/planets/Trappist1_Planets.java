@@ -58,7 +58,7 @@ public class Trappist1_Planets {
 		Trappist1b.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.3F, 0.3F));
 		Trappist1b.setRelativeOrbitTime(0.2F);
 		Trappist1b.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/gui/celestialbodies/trappist1bicon.png"));
-		Trappist1b.setDimensionInfo(71, WorldProviderTrappist1b.class);
+		Trappist1b.setDimensionInfo(-71, WorldProviderTrappist1b.class);
 		
 		Trappist1c = (Planet) new Planet("TrappistOneC").setParentSolarSystem(Trappist1System);
 		Trappist1c.setRingColorRGB(0.0F, 0.4F, 0.9F);
