@@ -4,14 +4,23 @@ import java.util.List;
 
 import asmodeuscore.api.dimension.IProviderFreeze;
 import asmodeuscore.core.astronomy.dimension.world.gen.WorldProviderAdvancedSpace;
+import asmodeuscore.core.astronomy.dimension.world.worldengine.WE_Biome;
+import asmodeuscore.core.astronomy.dimension.world.worldengine.WE_ChunkProvider;
+import asmodeuscore.core.astronomy.dimension.world.worldengine.standardcustomgen.WE_CaveGen;
+import asmodeuscore.core.astronomy.dimension.world.worldengine.standardcustomgen.WE_RavineGen;
+import asmodeuscore.core.astronomy.dimension.world.worldengine.standardcustomgen.WE_TerrainGenerator;
+import crazypanda.trappist1.init.ModBlocks;
 import crazypanda.trappist1.planets.Trappist1_Planets;
 import crazypanda.trappist1.planets.trappist1b.world.gen.BiomeProviderTrappist1b;
+import crazypanda.trappist1.planets.trappist1b.world.gen.we.Trappist1bMountains;
+import crazypanda.trappist1.planets.trappist1b.world.gen.we.Trappist1bPlains;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DimensionType;
@@ -161,6 +170,41 @@ public class WorldProviderTrappist1b extends WorldProviderAdvancedSpace implemen
 				//colors[2] = 0.02F - sunBrightness;
 			}
 		}*/
+	}
+	
+	public void genSettings(WE_ChunkProvider cp) {
+
+		
+		cp.createChunkGen_List .clear(); 
+		cp.createChunkGen_InXZ_List .clear(); 
+		cp.createChunkGen_InXYZ_List.clear(); 
+		cp.decorateChunkGen_List .clear(); 
+		
+		WE_Biome.setBiomeMap(cp, 1.2D, 4, 1400.0D, 0.675D);	
+		
+		WE_TerrainGenerator terrainGenerator = new WE_TerrainGenerator(); 
+		terrainGenerator.worldStoneBlock = ModBlocks.B_ROCK; 
+		terrainGenerator.worldStoneBlockMeta = 2;
+		terrainGenerator.worldSeaGen = false;
+		terrainGenerator.worldSeaGenBlock = Blocks.WATER;
+		terrainGenerator.worldSeaGenMaxY = 64;
+		cp.createChunkGen_List.add(terrainGenerator);
+		
+		//-// 
+		WE_CaveGen cg = new WE_CaveGen(); 
+		cg.replaceBlocksList .clear(); 
+		cg.replaceBlocksMetaList.clear(); 
+		cg.addReplacingBlock(terrainGenerator.worldStoneBlock, (byte)terrainGenerator.worldStoneBlockMeta); 
+		//cg.lavaBlock = CW_Main.bfLava2; 
+		cp.createChunkGen_List.add(cg); 
+		//-// 
+		 
+		
+		
+		cp.biomesList.clear();
+		
+		WE_Biome.addBiomeToGeneration(cp, new Trappist1bPlains());
+		WE_Biome.addBiomeToGeneration(cp, new Trappist1bMountains()); 
 	}
 
 }
