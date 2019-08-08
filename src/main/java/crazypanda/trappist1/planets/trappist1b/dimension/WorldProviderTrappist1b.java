@@ -14,6 +14,7 @@ import crazypanda.trappist1.planets.Trappist1_Planets;
 import crazypanda.trappist1.planets.trappist1b.world.gen.BiomeProviderTrappist1b;
 import crazypanda.trappist1.planets.trappist1b.world.gen.we.Trappist1bMountains;
 import crazypanda.trappist1.planets.trappist1b.world.gen.we.Trappist1bPlains;
+import crazypanda.trappist1.util.Trappist1Dimensions;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
@@ -98,8 +99,7 @@ public class WorldProviderTrappist1b extends WorldProviderAdvancedSpace implemen
 
 	@Override
 	public DimensionType getDimensionType() {
-		// TODO Auto-generated method stub
-		return null;
+		return Trappist1Dimensions.TRAPPIST1B;
 	}
 	
 	@Override

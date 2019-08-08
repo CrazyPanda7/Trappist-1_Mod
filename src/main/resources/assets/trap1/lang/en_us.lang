@@ -13,10 +13,16 @@ tile.d_rock.name=Trappist-1d Rock
 planet.TrappistOneB=Trappist-1b
 planet.TrappistOneC=Trappist-1c
 planet.TrappistOneD=Trappist-1d
+planet.TrappistOneE=Trappist-1e
+planet.TrappistOneF=Trappist-1f
+planet.TrappistOneG=Trappist-1g
+planet.TrappistOneH=Trappist-1h
 planet.Luhman16b=Luhman 16b
 
 solarsystem.TrappistOneSystem=Trappist-1
 solarsystem.Luhman16System=Luhman 16
+solarsystem.LalandeSystem=Lalande 21185
 
 star.Trappist1=Trappist-1a
 star.Luhman16=Luhman 16a
+star.Lalande=Lalande 21185b
