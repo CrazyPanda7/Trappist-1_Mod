@@ -14,6 +14,7 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import crazypanda.trappist1.planets.Trappist1_Planets;
 import crazypanda.trappist1.proxy.CommonProxy;
 import crazypanda.trappist1.util.Reference;
+import crazypanda.trappist1.util.Trappist1Dimensions;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION /*, dependencies = "required-after:GalacticraftCore;"*/)
 public class Main 
@@ -30,5 +31,6 @@ public class Main
 	public static void PreInit(FMLPreInitializationEvent event)
     {	
 		Trappist1_Planets.init();
+		
     }
 }

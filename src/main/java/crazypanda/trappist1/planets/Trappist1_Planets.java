@@ -7,6 +7,7 @@ import asmodeuscore.core.astronomy.BodiesHelper.Galaxies;
 import crazypanda.trappist1.planets.trappist1b.dimension.TeleportTypeTrappist1b;
 import crazypanda.trappist1.planets.trappist1b.dimension.WorldProviderTrappist1b;
 import crazypanda.trappist1.util.Reference;
+import crazypanda.trappist1.util.Trappist1Dimensions;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
@@ -14,7 +15,9 @@ import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import micdoodle8.mods.galacticraft.core.Constants;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.DimensionType;
 
 public class Trappist1_Planets {
 	public static SolarSystem Trappist1System;
@@ -36,6 +39,7 @@ public class Trappist1_Planets {
 	
 	public static void init()
 	{
+		
 		Trappist1System = new SolarSystem("TrappistOneSystem", Galaxies.MILKYWAY.getName()).setMapPosition(new Vector3(3.0F, 1.5F, 0.0F));
 		Trappist1 = (Star) new Star("Trappist1").setParentSolarSystem(Trappist1System).setTierRequired(6);
 		Trappist1.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/gui/celestialbodies/trappist1.png"));
