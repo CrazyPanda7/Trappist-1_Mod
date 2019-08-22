@@ -6,8 +6,11 @@ import asmodeuscore.core.astronomy.BodiesHelper;
 import asmodeuscore.core.astronomy.BodiesHelper.Galaxies;
 import crazypanda.trappist1.planets.trappist1b.dimension.TeleportTypeTrappist1b;
 import crazypanda.trappist1.planets.trappist1b.dimension.WorldProviderTrappist1b;
+//import crazypanda.trappist1.planets.trappist1b.dimension.TeleportTypeTrappist1b;
+//import crazypanda.trappist1.planets.trappist1b.dimension.WorldProviderTrappist1b;
 import crazypanda.trappist1.util.Reference;
 import crazypanda.trappist1.util.Trappist1Dimensions;
+//import crazypanda.trappist1.util.Trappist1Dimensions;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
@@ -18,16 +21,13 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.Constants;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
+import net.minecraftforge.common.DimensionManager;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 
 public class Trappist1_Planets {
 	public static SolarSystem Trappist1System;
-	public static SolarSystem Luhman16System;
-	public static SolarSystem Wolf359System;
-	public static SolarSystem LalandeSystem;
-	public static Star Lalande;
-	public static Star Luhman16;
 	public static Star Trappist1;
-	public static Star Wolf359;
 	public static Planet Trappist1b;
 	public static Planet Trappist1c;
 	public static Planet Trappist1d;
@@ -35,7 +35,6 @@ public class Trappist1_Planets {
 	public static Planet Trappist1f;
 	public static Planet Trappist1g;
 	public static Planet Trappist1h;
-	public static Planet Luhman16b;
 	
 	public static void init()
 	{
@@ -45,16 +44,6 @@ public class Trappist1_Planets {
 		Trappist1.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/gui/celestialbodies/trappist1.png"));
 		Trappist1System.setMainStar(Trappist1);
 		
-		LalandeSystem = new SolarSystem("LalandeSystem", Galaxies.MILKYWAY.getName()).setMapPosition(new Vector3(1.0F, -0.5F, 0.0F));
-		Lalande = (Star) new Star("Lalande").setParentSolarSystem(LalandeSystem).setTierRequired(6);
-		Lalande.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/gui/celestialbodies/trappist1.png"));
-		LalandeSystem.setMainStar(Lalande);
-		
-		Luhman16System = new SolarSystem("Luhman16System", Galaxies.MILKYWAY.getName()).setMapPosition(new Vector3(1.5F, 2.0F, 0.0F));
-		Luhman16 = (Star) new Star("Luhman16").setParentSolarSystem(Luhman16System).setTierRequired(-1);
-		Luhman16.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/gui/celestialbodies/browndwarf.png"));
-		Luhman16System.setMainStar(Luhman16);
-		
 		Trappist1b = (Planet) new Planet("TrappistOneB").setParentSolarSystem(Trappist1System);
 		Trappist1b.setRingColorRGB(0.0F, 0.4F, 0.9F);
 		Trappist1b.setPhaseShift((float) Math.PI);
@@ -62,7 +51,7 @@ public class Trappist1_Planets {
 		Trappist1b.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.3F, 0.3F));
 		Trappist1b.setRelativeOrbitTime(0.2F);
 		Trappist1b.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/gui/celestialbodies/trappist1bicon.png"));
-		Trappist1b.setDimensionInfo(-71, WorldProviderTrappist1b.class);
+		Trappist1b.setDimensionInfo(-711, WorldProviderTrappist1b.class);
 		
 		Trappist1c = (Planet) new Planet("TrappistOneC").setParentSolarSystem(Trappist1System);
 		Trappist1c.setRingColorRGB(0.0F, 0.4F, 0.9F);
@@ -112,17 +101,13 @@ public class Trappist1_Planets {
 		Trappist1h.setRelativeOrbitTime(12.8F);
 		Trappist1h.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/gui/celestialbodies/trappist1hicon.png"));
 		
-		Luhman16b = (Planet) new Planet("Luhman16b").setParentSolarSystem(Luhman16System);
-		Luhman16b.setRingColorRGB(0.0F, 0.0F, 0.0F);
-		Luhman16b.setPhaseShift((float) Math.PI);
-		Luhman16b.setTierRequired(-1);
-		Luhman16b.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.3F, 0.3F));
-		Luhman16b.setRelativeOrbitTime(1000.0F);
-		Luhman16b.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/gui/celestialbodies/browndwarf.png"));
-		
 		registryCelestial();
 		registryTeleport();
 		
+	}
+	
+	public void postInit(FMLPostInitializationEvent event) {		
+		Trappist1Dimensions.TRAPPIST1B = WorldUtil.getDimensionTypeById(-711);
 	}
 
 	private static void registryTeleport() 
@@ -133,8 +118,6 @@ public class Trappist1_Planets {
 	private static void registryCelestial() 
 	{
 		GalaxyRegistry.registerSolarSystem(Trappist1System);
-		GalaxyRegistry.registerSolarSystem(Luhman16System);
-		GalaxyRegistry.registerSolarSystem(LalandeSystem);
 		GalaxyRegistry.registerPlanet(Trappist1b);
 		GalaxyRegistry.registerPlanet(Trappist1c);
 		GalaxyRegistry.registerPlanet(Trappist1d);
@@ -142,16 +125,9 @@ public class Trappist1_Planets {
 		GalaxyRegistry.registerPlanet(Trappist1f);
 		GalaxyRegistry.registerPlanet(Trappist1g);
 		GalaxyRegistry.registerPlanet(Trappist1h);
-		GalaxyRegistry.registerPlanet(Luhman16b);
 		
 		BodiesData data = new BodiesData(BodiesHelper.red + " " + BodiesHelper.getClassBody(ClassBody.DWARF), 20.336F, 0, 0, false);
 		BodiesHelper.registerBodyWithClass(Trappist1System.getMainStar(), data);
-		
-		BodiesData data2 = new BodiesData(BodiesHelper.red + " " + BodiesHelper.getClassBody(ClassBody.DWARF), 20.336F, 0, 0, false);
-		BodiesHelper.registerBodyWithClass(LalandeSystem.getMainStar(), data2);
-		
-		BodiesData data3 = new BodiesData(BodiesHelper.brown + " " + BodiesHelper.getClassBody(ClassBody.DWARF), 20.336F, 0, 0, false);
-		BodiesHelper.registerBodyWithClass(LalandeSystem.getMainStar(), data3);
 		
 	}
 }

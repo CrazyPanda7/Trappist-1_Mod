@@ -1,138 +1,123 @@
-package crazypanda.trappist1.planets.trappist1b.dimension;
+/*package crazypanda.trappist1.planets.trappist1b.dimension;
 
 import java.util.List;
+
+import com.google.common.collect.Lists;
 
 import asmodeuscore.core.astronomy.dimension.world.gen.ChunkProviderSpaceLakes;
 import crazypanda.trappist1.init.ModBlocks;
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 public class ChunkProviderTrappist1b extends ChunkProviderSpaceLakes{
-
-	public ChunkProviderTrappist1b(World world, long seed, boolean flag) {
-		super(world, seed, flag);
-	}
-
 	@Override
-	public void recreateStructures(Chunk chunkIn, int x, int z) {
-		// TODO Auto-generated method stub
-		
+	protected List<MapGenBaseMeta> getWorldGenerators()
+	{
+		List<MapGenBaseMeta> generators = Lists.newArrayList();
+		return generators;
 	}
-
+	
+	public ChunkProviderTrappist1b(World par1World, long seed, boolean mapFeaturesEnabled)	
+	{
+		super(par1World, seed, mapFeaturesEnabled);
+	}
+	
+	@Override	
+	protected BiomeDecoratorSpace getBiomeGenerator() {	
+	    return null;	
+	}
+	
+	@Override	
+	protected Biome[] getBiomesForGeneration() {	
+	    return new Biome[]{BiomeAdaptive.biomeDefault};	
+	}
+	
 	@Override
-	protected BiomeDecoratorSpace getBiomeGenerator() {
-		// TODO Auto-generated method stub
-		return null;
+	public int getCraterProbability() {	
+	    return 150;	
 	}
-
+	
 	@Override
-	protected Biome[] getBiomesForGeneration() {
-		// TODO Auto-generated method stub
-		return null;
+	public double getHeightModifier() {	
+	    return 20;	
 	}
-
+	
 	@Override
 	public void onChunkProvider(int cX, int cZ, ChunkPrimer primer) {
-		// TODO Auto-generated method stub
-		
 	}
-
+	
 	@Override
-	public void onPopulate(int x, int z) {
-		// TODO Auto-generated method stub
-		
+	public void onPopulate(int cX, int cZ) {
 	}
-
+	
 	@Override
-	protected List<MapGenBaseMeta> getWorldGenerators() {
-		// TODO Auto-generated method stub
-		return null;
+	public void recreateStructures(Chunk chunkIn, int x, int z) {
 	}
-
-	@Override
-	public double getHeightModifier() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public double getSmallFeatureHeightModifier() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
+	
 	@Override
 	public double getMountainHeightModifier() {
-		// TODO Auto-generated method stub
-		return 0;
+	    return 0;
 	}
-
-	@Override
-	public double getValleyHeightModifier() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
+	
 	@Override
 	public int getWaterLevel() {
-		// TODO Auto-generated method stub
-		return 60;
+	    return 80;
 	}
-
-	@Override
-	public boolean canGenerateWaterBlock() {
-		// TODO Auto-generated method stub
-		return false;
+	
+	@Override	
+	public double getSmallFeatureHeightModifier() {	
+	    return 1;	
 	}
-
-	@Override
-	public boolean canGenerateIceBlock() {
-		// TODO Auto-generated method stub
-		return true;
+	
+	@Override	
+	public double getValleyHeightModifier() {	
+	    return 0;	
 	}
-
-	@Override
-	public int getCraterProbability() {
-		// TODO Auto-generated method stub
-		return 200;
-	}
-
-	@Override
-	protected BlockMetaPair getWaterBlock() {
-		return new BlockMetaPair(Blocks.ICE, (byte) 2);
-	}
-
+	
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ModBlocks.B_SURFACEROCK, (byte) 2);
+		return new BlockMetaPair(ModBlocks.B_SURFACEROCK, (byte) 0);
 	}
-
+	
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ModBlocks.B_SUBROCK, (byte) 2);
+		return new BlockMetaPair(ModBlocks.B_SUBROCK, (byte) 0);
 	}
-
+	
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ModBlocks.B_ROCK, (byte) 2);
+		return new BlockMetaPair(ModBlocks.B_ROCK, (byte) 0);
 	}
-
+	
 	@Override
 	protected boolean enableBiomeGenBaseBlock() {
-		// TODO Auto-generated method stub
 		return false;
 	}
-
+	
 	@Override
-	protected GenType getGenType() {
-		// TODO Auto-generated method stub
+	public boolean canGenerateWaterBlock() {
+		return false;
+	}
+	
+	@Override
+	public boolean canGenerateIceBlock() {
+		return true;
+	}
+	
+	@Override
+	protected BlockMetaPair getWaterBlock() {
 		return null;
 	}
-}
+	
+	@Override
+	protected GenType getGenType() {
+		return GenType.VANILLA;
+	}
+	
+}*/
