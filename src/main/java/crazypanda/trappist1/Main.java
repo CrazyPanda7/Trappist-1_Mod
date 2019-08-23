@@ -15,6 +15,7 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import crazypanda.trappist1.planets.Trappist1_Planets;
 import crazypanda.trappist1.proxy.CommonProxy;
 import crazypanda.trappist1.util.Reference;
+import crazypanda.trappist1.util.Trappist1Dimensions;
 //import crazypanda.trappist1.util.Trappist1Dimensions;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 
@@ -39,7 +40,7 @@ public class Main
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 			
-			//Trappist1Dimensions.TRAPPIST1B = WorldUtil.getDimensionTypeById(-711);
+			Trappist1Dimensions.TRAPPIST1B = WorldUtil.getDimensionTypeById(-711);
 				
 	}
 }
