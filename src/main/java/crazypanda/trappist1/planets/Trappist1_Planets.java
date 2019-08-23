@@ -63,7 +63,7 @@ public class Trappist1_Planets {
 		
 		Trappist1d = (Planet) new Planet("TrappistOneD").setParentSolarSystem(Trappist1System);
 		Trappist1d.setRingColorRGB(0.0F, 0.4F, 0.9F);
-		Trappist1d.setPhaseShift((float) Math.PI * 4);
+		Trappist1d.setPhaseShift((float) Math.PI / 2);
 		Trappist1d.setTierRequired(6);
 		Trappist1d.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.9F, 0.9F));
 		Trappist1d.setRelativeOrbitTime(0.8F);
@@ -71,7 +71,7 @@ public class Trappist1_Planets {
 		
 		Trappist1e = (Planet) new Planet("TrappistOneE").setParentSolarSystem(Trappist1System);
 		Trappist1e.setRingColorRGB(0.0F, 0.4F, 0.9F);
-		Trappist1e.setPhaseShift((float) Math.PI * 8);
+		Trappist1e.setPhaseShift((float) Math.PI * 4);
 		Trappist1e.setTierRequired(6);
 		Trappist1e.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.2F, 1.2F));
 		Trappist1e.setRelativeOrbitTime(1.6F);
@@ -79,7 +79,7 @@ public class Trappist1_Planets {
 		
 		Trappist1f = (Planet) new Planet("TrappistOneF").setParentSolarSystem(Trappist1System);
 		Trappist1f.setRingColorRGB(0.0F, 0.4F, 0.9F);
-		Trappist1f.setPhaseShift((float) Math.PI * 16);
+		Trappist1f.setPhaseShift((float) Math.PI / 4);
 		Trappist1f.setTierRequired(6);
 		Trappist1f.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.5F, 1.5F));
 		Trappist1f.setRelativeOrbitTime(3.2F);
@@ -87,7 +87,7 @@ public class Trappist1_Planets {
 		
 		Trappist1g = (Planet) new Planet("TrappistOneG").setParentSolarSystem(Trappist1System);
 		Trappist1g.setRingColorRGB(0.0F, 0.4F, 0.9F);
-		Trappist1g.setPhaseShift((float) Math.PI * 32);
+		Trappist1g.setPhaseShift((float) Math.PI * 8);
 		Trappist1g.setTierRequired(6);
 		Trappist1g.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.8F, 1.8F));
 		Trappist1g.setRelativeOrbitTime(6.4F);
@@ -95,7 +95,7 @@ public class Trappist1_Planets {
 		
 		Trappist1h = (Planet) new Planet("TrappistOneH").setParentSolarSystem(Trappist1System);
 		Trappist1h.setRingColorRGB(0.0F, 0.4F, 0.9F);
-		Trappist1h.setPhaseShift((float) Math.PI * 64);
+		Trappist1h.setPhaseShift((float) Math.PI / 8);
 		Trappist1h.setTierRequired(6);
 		Trappist1h.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.1F, 2.1F));
 		Trappist1h.setRelativeOrbitTime(12.8F);

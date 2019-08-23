@@ -36,11 +36,4 @@ public class Main
 		Trappist1_Planets.init();
 		
     }
-	
-	@EventHandler
-	public void postInit(FMLPostInitializationEvent event) {
-			
-			Trappist1Dimensions.TRAPPIST1B = WorldUtil.getDimensionTypeById(-711);
-				
-	}
 }
