@@ -1,16 +1,10 @@
 package crazypanda.trappist1.planets;
 
-import asmodeuscore.api.dimension.IAdvancedSpace.ClassBody;
-import asmodeuscore.core.astronomy.BodiesData;
-import asmodeuscore.core.astronomy.BodiesHelper;
-import asmodeuscore.core.astronomy.BodiesHelper.Galaxies;
 import crazypanda.trappist1.planets.trappist1b.dimension.TeleportTypeTrappist1b;
 import crazypanda.trappist1.planets.trappist1b.dimension.WorldProviderTrappist1b;
-//import crazypanda.trappist1.planets.trappist1b.dimension.TeleportTypeTrappist1b;
-//import crazypanda.trappist1.planets.trappist1b.dimension.WorldProviderTrappist1b;
 import crazypanda.trappist1.util.Reference;
 import crazypanda.trappist1.util.Trappist1Dimensions;
-//import crazypanda.trappist1.util.Trappist1Dimensions;
+import crazypanda.trappist1.util.Trappist1Dimensions;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
@@ -26,8 +20,11 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 
 public class Trappist1_Planets {
+	
 	public static SolarSystem Trappist1System;
+	
 	public static Star Trappist1;
+	
 	public static Planet Trappist1b;
 	public static Planet Trappist1c;
 	public static Planet Trappist1d;
@@ -39,15 +36,15 @@ public class Trappist1_Planets {
 	public static void init()
 	{
 		
-		Trappist1System = new SolarSystem("TrappistOneSystem", Galaxies.MILKYWAY.getName()).setMapPosition(new Vector3(3.0F, 1.5F, 0.0F));
-		Trappist1 = (Star) new Star("Trappist1").setParentSolarSystem(Trappist1System).setTierRequired(6);
+		Trappist1System = new SolarSystem("TrappistOneSystem", null).setMapPosition(new Vector3(3.0F, 1.5F, 0.0F));
+		Trappist1 = (Star) new Star("Trappist1").setParentSolarSystem(Trappist1System).setTierRequired(3);
 		Trappist1.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/gui/celestialbodies/trappist1.png"));
 		Trappist1System.setMainStar(Trappist1);
 		
 		Trappist1b = (Planet) new Planet("TrappistOneB").setParentSolarSystem(Trappist1System);
 		Trappist1b.setRingColorRGB(0.0F, 0.4F, 0.9F);
 		Trappist1b.setPhaseShift((float) Math.PI);
-		Trappist1b.setTierRequired(6);
+		Trappist1b.setTierRequired(3);
 		Trappist1b.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.3F, 0.3F));
 		Trappist1b.setRelativeOrbitTime(0.2F);
 		Trappist1b.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/gui/celestialbodies/trappist1bicon.png"));
@@ -125,9 +122,6 @@ public class Trappist1_Planets {
 		GalaxyRegistry.registerPlanet(Trappist1f);
 		GalaxyRegistry.registerPlanet(Trappist1g);
 		GalaxyRegistry.registerPlanet(Trappist1h);
-		
-		BodiesData data = new BodiesData(BodiesHelper.red + " " + BodiesHelper.getClassBody(ClassBody.DWARF), 20.336F, 0, 0, false);
-		BodiesHelper.registerBodyWithClass(Trappist1System.getMainStar(), data);
 		
 	}
 }
