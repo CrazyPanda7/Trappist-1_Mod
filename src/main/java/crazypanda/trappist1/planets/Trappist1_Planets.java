@@ -108,7 +108,6 @@ public class Trappist1_Planets {
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
 		
-		//if(ACConfigCore.enableACentauriSystems)
 			Trappist1Dimensions.TRAPPIST1B = WorldUtil.getDimensionTypeById(-711);
 				
 	}
