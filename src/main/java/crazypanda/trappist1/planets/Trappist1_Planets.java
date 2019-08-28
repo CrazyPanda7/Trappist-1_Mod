@@ -14,6 +14,7 @@ import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraftforge.common.DimensionManager;
@@ -103,6 +104,11 @@ public class Trappist1_Planets {
 		registryTeleport();
 		
 	}
+	
+	public static void postInit(FMLPostInitializationEvent event)
+    {
+        Trappist1Dimensions.TRAPPIST1B = WorldUtil.getDimensionTypeById(-711);
+    }
 
 	private static void registryTeleport() 
 	{
