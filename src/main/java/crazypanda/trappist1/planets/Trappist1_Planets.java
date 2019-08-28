@@ -105,10 +105,13 @@ public class Trappist1_Planets {
 		
 	}
 	
-	public static void postInit(FMLPostInitializationEvent event)
-    {
-        Trappist1Dimensions.TRAPPIST1B = WorldUtil.getDimensionTypeById(-711);
-    }
+	@Override
+	public void postInit(FMLPostInitializationEvent event) {
+		
+		//if(ACConfigCore.enableACentauriSystems)
+			Trappist1Dimensions.TRAPPIST1B = WorldUtil.getDimensionTypeById(-711);
+				
+	}
 
 	private static void registryTeleport() 
 	{
