@@ -9,6 +9,12 @@ public class Trappist1Dimensions {
 	
 	public static DimensionType TRAPPIST1B;
 	
+	public static void init() {
+		Trappist1Dimensions.TRAPPIST1B = Trappist1Dimensions.getDimType(-711);
+	}
 	
+	public static DimensionType getDimType(int dimId) {
+		return WorldUtil.getDimensionTypeById(dimId);
+	}
 	
 }

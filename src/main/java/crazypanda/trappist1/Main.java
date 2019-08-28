@@ -36,4 +36,10 @@ public class Main
 		Trappist1_Planets.init();
 		
     }
+	
+	public void postInit(FMLPostInitializationEvent event) {
+		
+		Trappist1Dimensions.init();
+			
+	}
 }
