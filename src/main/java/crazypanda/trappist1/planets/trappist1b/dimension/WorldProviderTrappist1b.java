@@ -112,7 +112,7 @@ public class WorldProviderTrappist1b extends WorldProviderSpace implements ISola
     @Override
     public IChunkGenerator createChunkGenerator()
     {
-        return new ChunkProviderTrappist1b(this.world, this.world.getSeed(), doesWaterVaporize);
+        return null;
     }
 
     @Override
@@ -160,6 +160,6 @@ public class WorldProviderTrappist1b extends WorldProviderSpace implements ISola
 	@Override
 	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		// TODO Auto-generated method stub
-		return null;
+		return ChunkProviderTrappist1b.class;
 	}
 }
