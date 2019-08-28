@@ -15,7 +15,7 @@ public class BiomeProviderTrappist1b extends BiomeProvider{
 	private BiomeCache biomeCache;
 	private List<Biome> biomesToSpawnIn;
 	
-	protected BiomeProviderTrappist1b() {
+	public BiomeProviderTrappist1b() {
 		body = Trappist1_Planets.Trappist1b;
 		biomeCache = new BiomeCache(this);
 		biomesToSpawnIn = new ArrayList<>();
