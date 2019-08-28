@@ -6,7 +6,7 @@ import java.util.List;
 import crazypanda.trappist1.init.ModBlocks;
 import crazypanda.trappist1.planets.Trappist1_Planets;
 import crazypanda.trappist1.planets.trappist1b.world.gen.BiomeProviderTrappist1b;
-import crazypanda.trappist1.planets.trappist1b.world.gen.ChunkGeneratorTrappist1b;
+import crazypanda.trappist1.planets.trappist1b.world.gen.ChunkProviderTrappist1b;
 import crazypanda.trappist1.util.Trappist1Dimensions;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
@@ -112,7 +112,7 @@ public class WorldProviderTrappist1b extends WorldProviderSpace implements ISola
     @Override
     public IChunkGenerator createChunkGenerator()
     {
-        return new ChunkGeneratorTrappist1b(this.world, this.world.getSeed());
+        return new ChunkProviderTrappist1b(this.world, this.world.getSeed(), doesWaterVaporize);
     }
 
     @Override

@@ -12,10 +12,12 @@ import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import crazypanda.trappist1.init.ModBlocks;
 import crazypanda.trappist1.planets.Trappist1_Planets;
 import crazypanda.trappist1.proxy.CommonProxy;
 import crazypanda.trappist1.util.Reference;
 import crazypanda.trappist1.util.Trappist1Dimensions;
+import crazypanda.trappist1.util.handlers.RegistryHandler;
 //import crazypanda.trappist1.util.Trappist1Dimensions;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 
@@ -34,6 +36,7 @@ public class Main
 	public static void PreInit(FMLPreInitializationEvent event)
     {	
 		Trappist1_Planets.init();
+		RegistryHandler.onBlockRegister(null);
 		
     }
 	

@@ -14,7 +14,7 @@ public class BiomeTrappist1b extends BiomeGenBaseGC{
     public static final BlockMetaPair BLOCK_FILL = new BlockMetaPair(ModBlocks.B_SUBROCK, (byte) 6);
     public static final BlockMetaPair BLOCK_LOWER = new BlockMetaPair(ModBlocks.B_ROCK, (byte) 9);
 
-	protected BiomeTrappist1b(BiomeProperties var1) {
+	public BiomeTrappist1b(BiomeProperties var1) {
 		super(var1);
 		// TODO Auto-generated constructor stub
 	}
