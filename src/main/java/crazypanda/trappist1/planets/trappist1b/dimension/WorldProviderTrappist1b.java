@@ -78,7 +78,7 @@ public class WorldProviderTrappist1b extends WorldProviderSpace implements ISola
     @Override
     public float getGravity()
     {
-        return 0.065F;
+        return 0.4F;
     }
 
     @Override
