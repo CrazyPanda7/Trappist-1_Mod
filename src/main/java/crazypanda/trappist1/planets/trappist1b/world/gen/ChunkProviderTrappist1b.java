@@ -141,8 +141,6 @@ public class ChunkProviderTrappist1b extends ChunkProviderBase{
 		this.replaceBlocksForBiome(x, z, chunkprimer, null);
 		
 		
-		// this.dungeonGeneratorMoon.generate(this.world, x, z, chunkprimer);
-		// this.villageGenerator.generate(this.world, x, z, chunkprimer);
 		
 		Chunk chunk = new Chunk(this.world, chunkprimer, x, z);
 		byte[] abyte = chunk.getBiomeArray();

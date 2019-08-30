@@ -15,6 +15,7 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
+import micdoodle8.mods.galacticraft.planets.venus.dimension.TeleportTypeVenus;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraftforge.common.DimensionManager;
@@ -109,7 +110,7 @@ public class Trappist1_Planets {
 
 	private static void registryTeleport() 
 	{
-		GalacticraftRegistry.registerTeleportType(WorldProviderTrappist1b.class, new TeleportTypeTrappist1b());
+		GalacticraftRegistry.registerTeleportType(WorldProviderTrappist1b.class, new TeleportTypeVenus());
 	}
 
 	private static void registryCelestial() 

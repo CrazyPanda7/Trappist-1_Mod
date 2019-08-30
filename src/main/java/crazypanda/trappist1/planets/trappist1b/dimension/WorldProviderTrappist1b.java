@@ -12,6 +12,7 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
+import micdoodle8.mods.galacticraft.core.client.SkyProviderMoon;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
@@ -63,6 +64,10 @@ public class WorldProviderTrappist1b extends WorldProviderSpace implements ISola
         value = 1.0F - value;
         return value * 0.9F;
     }
+    
+    public void renderSky() {
+		this.setSkyRenderer(new SkyProviderMoon());
+	}
 
     @Override
     public double getSolarEnergyMultiplier()
