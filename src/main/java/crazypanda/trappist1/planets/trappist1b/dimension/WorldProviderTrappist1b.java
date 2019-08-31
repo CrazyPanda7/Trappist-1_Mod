@@ -141,13 +141,13 @@ public class WorldProviderTrappist1b extends WorldProviderSpace implements ISola
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public double getFuelUsageMultiplier() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 1;
 	}
 
 	@Override

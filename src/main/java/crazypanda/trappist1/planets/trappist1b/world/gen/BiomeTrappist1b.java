@@ -4,7 +4,6 @@ import java.util.Random;
 
 import crazypanda.trappist1.init.ModBlocks;
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkPrimer;
@@ -17,6 +16,7 @@ public class BiomeTrappist1b extends BiomeGenBaseGC{
 
 	public BiomeTrappist1b(BiomeProperties var1) {
 		super(var1);
+		// TODO Auto-generated constructor stub
 	}
 	
 	@Override

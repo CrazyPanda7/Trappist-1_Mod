@@ -36,7 +36,6 @@ public class Main
 	public static void PreInit(FMLPreInitializationEvent event)
     {	
 		Trappist1_Planets.init();
-		RegistryHandler.onBlockRegister(null);
 		
     }
 	
